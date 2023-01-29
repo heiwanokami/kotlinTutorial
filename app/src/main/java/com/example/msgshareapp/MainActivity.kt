@@ -30,8 +30,20 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, userinput, Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("user_message", userinput)
             startActivity(intent)
             }
+
+        val shareButton = findViewById<Button>(R.id.btnShareToOtherApps)
+        shareButton.setOnClickListener {
+            // Do something in response to button click
+            val userinput = findViewById<EditText>(R.id.etUserMessage).text.toString()
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT, userinput)
+            intent.type = "text/plain"
+            startActivity(Intent.createChooser(intent, "Select app:"))
+        }
         }
     }
 

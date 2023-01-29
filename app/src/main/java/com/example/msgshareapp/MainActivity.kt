@@ -44,6 +44,13 @@ class MainActivity : AppCompatActivity() {
             intent.type = "text/plain"
             startActivity(Intent.createChooser(intent, "Select app:"))
         }
+
+        val btn_recycle = findViewById<Button>(R.id.btnRecycleViewDemo)
+        btn_recycle.setOnClickListener {
+            // Do something in response to button clic
+            val intent = Intent(this, HobbiesActivity::class.java)
+            startActivity(intent)
+        }
         }
     }
 

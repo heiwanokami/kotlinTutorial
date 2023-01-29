@@ -31,7 +31,7 @@
         android:id="@+id/btnSendMsgToNextActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop= "300dp"
+        android:layout_marginTop="400dp"
         android:layout_centerHorizontal="true"
         android:text="Send Data To Next Activity" />
 
@@ -43,5 +43,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="350dp"
         android:text="Share to other apps" />
+
+    <Button
+        android:id="@+id/btnRecycleViewDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Recycle View Demo" />
 
 </RelativeLayout>
